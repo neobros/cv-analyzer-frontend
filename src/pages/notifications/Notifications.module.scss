@@ -1,0 +1,408 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 0;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 0;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+}
+
+.input {
+  min-height: 48px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f7f8fc;
+}
+
+.input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(61, 173, 255, 0.46);
+  box-shadow: 0 0 0 0.2rem rgba(61, 173, 255, 0.12);
+  color: #ffffff;
+}
+
+.statusSelector {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.statusOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.statusOption:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.statusOptionActive {
+  border-color: rgba(58, 193, 114, 0.34);
+  background: rgba(58, 193, 114, 0.14);
+  color: #dff9ea;
+}
+
+.statusOptionInactive {
+  border-color: rgba(255, 184, 77, 0.3);
+  background: rgba(255, 184, 77, 0.12);
+  color: #ffe5bd;
+}
+
+.statusDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statusDotActive {
+  background: #4ade80;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.14);
+}
+
+.statusDotInactive {
+  background: #f59e0b;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.14);
+}
+
+.formActions {
+  margin-top: 1.1rem;
+}
+
+.submitButton {
+  min-width: 160px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.feedbackError,
+.feedbackSuccess {
+  border-radius: 12px;
+  padding: 0.8rem 0.95rem;
+  margin-bottom: 0.95rem;
+  font-size: 0.92rem;
+}
+
+.feedbackError {
+  background: rgba(255, 86, 86, 0.12);
+  color: #ffb5b5;
+}
+
+.feedbackSuccess {
+  background: rgba(58, 193, 114, 0.12);
+  color: #aef0c9;
+}
+
+.tableWrap {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.tableWrap :global(table) {
+  color: #eef4ff;
+}
+
+.tableWrap :global(thead th) {
+  color: rgba(255, 255, 255, 0.78);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.tableWrap :global(table th),
+.tableWrap :global(table td) {
+  vertical-align: middle;
+}
+
+.tableWrap :global(tbody td) {
+  color: #edf3ff;
+  border-color: rgba(255, 255, 255, 0.06);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tableWrap :global(tbody tr:hover td) {
+  background: rgba(79, 154, 255, 0.14);
+  color: #ffffff;
+}
+
+.tableWrap :global(tbody tr:hover td .btn),
+.tableWrap :global(tbody tr:hover td button) {
+  color: inherit;
+}
+
+.passwordCell {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 160px;
+}
+
+.passwordValue {
+  font-family: "Courier New", monospace;
+  font-size: 0.84rem;
+  color: #eaf2ff;
+  min-width: 88px;
+}
+
+.roleChip,
+.statusChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 30px;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.roleChipAdmin {
+  background: rgba(255, 96, 96, 0.14);
+  color: #ffc2c2;
+}
+
+.roleChipWorker {
+  background: rgba(71, 174, 255, 0.14);
+  color: #bfe4ff;
+}
+
+.statusChipActive {
+  background: rgba(58, 193, 114, 0.14);
+  color: #c8f5db;
+}
+
+.statusChipInactive {
+  background: rgba(255, 184, 77, 0.14);
+  color: #ffe0a6;
+}
+
+.actionButton {
+  min-width: 118px;
+  min-height: 38px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.actionButton:hover {
+  transform: translateY(-1px);
+}
+
+.actionButton:disabled {
+  opacity: 0.7;
+  transform: none;
+}
+
+.actionButtonActivate {
+  background: linear-gradient(135deg, #2ccf84, #1fa968);
+  color: #07170f;
+}
+
+.actionButtonDeactivate {
+  background: linear-gradient(135deg, #ffb347, #f28b1f);
+  color: #2d1400;
+}
+
+.actionButtonNeutral {
+  min-width: 96px;
+  background: linear-gradient(135deg, #63b3ff, #3d8cff);
+  color: #061730;
+}
+
+.passwordChangeButton {
+  min-width: 74px;
+  min-height: 32px;
+  padding: 0.42rem 0.8rem;
+  font-size: 0.78rem;
+}
+
+.lockedText {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.86rem;
+}
+
+.passwordModalWrap {
+  max-width: 460px;
+}
+
+.passwordModalContent {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top, rgba(72, 151, 255, 0.18), transparent 42%),
+    linear-gradient(180deg, rgba(18, 28, 58, 0.98), rgba(9, 15, 34, 0.98));
+  color: #f5f8ff;
+  box-shadow: 0 26px 80px rgba(2, 8, 26, 0.6);
+}
+
+.passwordModalBody {
+  padding: 0;
+}
+
+.passwordModalHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 78px;
+  padding: 1.1rem 4.25rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.passwordModalTitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 8.5rem);
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #f7f9ff;
+  text-align: center;
+  pointer-events: none;
+}
+
+.passwordModalClose {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.09);
+  color: #f5f8ff;
+  transform: translateY(-50%);
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.passwordModalClose:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.passwordModalClose:disabled {
+  opacity: 0.6;
+}
+
+.passwordModalClose span {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.modalText {
+  margin: 1.15rem 1.25rem 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.95rem 1.25rem 1.15rem;
+  margin-top: 1rem;
+}
+
+.modalCancelButton,
+.modalSaveButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  min-height: 42px;
+  border: 0;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.75rem 1.1rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modalCancelButton {
+  background: rgba(255, 255, 255, 0.09);
+  color: #f4f7ff;
+}
+
+.modalCancelButton:hover:not(:disabled),
+.modalSaveButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.modalCancelButton:focus,
+.modalSaveButton:focus {
+  outline: none;
+}
+
+.modalCancelButton:disabled,
+.modalSaveButton:disabled {
+  opacity: 0.7;
+}
+
+.modalSaveButton {
+  background: linear-gradient(135deg, #63b3ff, #3d8cff);
+  color: #061730;
+}
+
+.modalFieldWrap {
+  padding: 0 1.25rem;
+}
+
+.emptyState {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1rem 0;
+}
+
+@media (max-width: 991px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statusSelector {
+    grid-template-columns: 1fr;
+  }
+}

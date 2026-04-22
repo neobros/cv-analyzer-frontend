@@ -1,0 +1,242 @@
+@import '../../styles/app';
+
+.root {
+  display: flex;
+  justify-content: flex-end !important;
+  @media (max-width: breakpoint-max(sm)) {
+    margin-bottom: 50px;
+  }
+
+  ul > li > a {
+    padding: 0.5rem 12px;
+    @media(max-width: 580px) {
+      padding: 0.5rem 6px;
+    }
+  }
+
+  :global {
+    .alert {
+      height: 30px;
+      width: 275px;
+      display: flex;
+      margin: auto;
+      transition: margin-top 0.2s ease;
+      background: #12142B80;
+      border: none;
+      font-size: 1rem;
+      line-height: 20px;
+      padding: 5px 8px;
+      color: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+
+      @media (max-width: 1255px) {
+        display: none !important;
+      }
+    
+      button.close {
+        color: $icon-blue;
+        font-weight: normal;
+        font-size: 18px !important;
+        margin-top: 1px;
+      }
+      .btn-link > svg {
+        vertical-align: bottom;
+      }
+    }
+
+    .input-transparent.form-control {
+      padding-left: $input-btn-padding-x !important;
+    }
+  }
+}
+
+.logo {
+  position: absolute;
+
+  @media (min-height: 940px) {
+    position: fixed;
+  }
+
+  left: 56px;
+  top: 18px;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: normal;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+
+
+
+  @media (max-width: breakpoint-max(sm)) {
+    top: 10px;
+    left: 15px;
+
+    strong {
+      display: block;
+    }
+  }
+
+  &.logoHidden {
+    display: none;
+  }
+}
+
+.divider {
+  display: block;
+  width: 1px;
+  margin: 10px 14px;
+  background: $icon-color;
+}
+
+.navItem {
+  font-size: 1.5rem;
+  outline: 0;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    color: $white !important;
+  }
+
+  :global(.glyphicon),
+  :global(.fa) {
+    vertical-align: baseline;
+  }
+}
+
+.glyphicon {
+  color: #3979F6;
+}
+
+.image {
+  float: left;
+  width: 40px;
+  margin-top: 7px;
+  border-radius: 50%;
+}
+
+.imageAccount {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.count {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  bottom: 8px;
+  right: 5px;
+  background: $green; 
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+}
+
+.notificationsMenu {
+  padding: 0 12px;
+  > a {
+    background-color: transparent!important;    
+  }
+
+  :global .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+    top: $navbar-height !important;
+  }
+
+  ::after {
+    padding: 0;
+    margin: 0;
+  }
+
+  @media(max-width: 580px) {
+    :global .dropdown-menu {
+      right: -50% !important;
+    }
+  }
+}
+
+.accountCheck {
+  color: #edf3ff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.notificationsWrapper {
+  width: min-content;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+  color: #081423;
+  font-weight: 700;
+  font-size: 15px;
+  margin-right: 10px;
+  box-shadow: 0 10px 22px rgba(20, 34, 70, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.avatarText {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+}
+
+.accountToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.35rem 0.45rem !important;
+  border-radius: 999px;
+  background: rgba(12, 18, 34, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d8e6fb !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(12px);
+
+  &:hover,
+  &:focus {
+    background: rgba(18, 27, 48, 0.9);
+    color: #ffffff !important;
+  }
+
+  @media (max-width: breakpoint-max(xs)) {
+    padding-right: 0.2rem !important;
+  }
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  height: 28px;
+  margin: auto 6px;
+  padding: 0 0.8rem;
+  border-radius: 999px;
+  color: #09182b;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: $font-weight-bold;
+  background: linear-gradient(135deg, #8de7ff, #ffd3a9);
+}
+
+.burger {
+  align-self: end;
+  padding-left: 0;
+}
+
+.headerIcon {
+  fill: $icon-color;
+}
+
