@@ -1,0 +1,103 @@
+@import '../../styles/app';
+
+.root {
+  height: 100%;
+  position: relative;
+  left: 0;
+  transition: left $sidebar-transition-time ease-in-out;
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 89, 0.14), transparent 24%),
+    radial-gradient(circle at 80% 20%, rgba(61, 180, 242, 0.12), transparent 22%),
+    linear-gradient(135deg, #08111f 0%, #0d1727 45%, #111c30 100%);
+  color: #eef4ff;
+  overflow: hidden;
+}
+
+.root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(circle at center, black 42%, transparent 92%);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.appBackground {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dottedSurface {
+  position: absolute;
+  inset: 0;
+  opacity: 0.62;
+}
+
+.surfaceGlow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(80, 223, 255, 0.16), transparent 24%),
+    radial-gradient(circle at 82% 22%, rgba(255, 146, 106, 0.13), transparent 20%),
+    radial-gradient(circle at 50% 70%, rgba(108, 165, 255, 0.1), transparent 28%);
+}
+
+.wrap {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  margin-left: $sidebar-width-open;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  transition: left $sidebar-transition-time ease-in-out;
+  z-index: 1;
+  
+  @media print {
+    margin: 0;
+  }
+
+  @media (max-width: breakpoint-max(sm)) {
+    margin-left: 0;
+    left: 0;
+  }
+
+  :global(.sidebar-right) & {
+    margin-left: 0;
+    margin-right: $sidebar-width-open;
+  }
+
+  :global(.sidebar-hide) & {
+    margin: 0;
+  }
+}
+
+.content {
+  position: relative;
+  flex-grow: 1;
+  padding: 25px $content-padding ($content-padding + 20px);
+  background: transparent;
+
+  @media (max-width: breakpoint-max(sm)) {
+    padding: 20px 15px;
+  }
+
+  // hammers disallows text selection, allowing it for large screens
+  @media (min-width: breakpoint-min(sm)) {
+    user-select: auto !important;
+  }
+  
+}
+
+.contentFooter {
+  position: absolute;
+  bottom: 15px;
+  color: rgba(229, 238, 250, 0.56);
+}

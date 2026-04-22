@@ -1,0 +1,101 @@
+.root {
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+.metricsHint {
+  margin-top: 0.75rem;
+  color: rgba(124, 247, 213, 0.82);
+  font-size: 0.9rem;
+}
+
+.heroActions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.statCard {
+  min-height: 145px;
+}
+
+.statLabel {
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.76rem;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.emptyState {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1rem 0;
+}
+
+.muted {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+.panelBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.panelRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.pipelineCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pipelineCard:last-child {
+  border-bottom: 0;
+}
+
+.recommendationCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem;
+  min-height: 170px;
+}
+
+.costLine {
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    flex-direction: column;
+  }
+}
